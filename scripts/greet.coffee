@@ -26,6 +26,6 @@ module.exports = (robot) ->
   robot.respond /((疲|つか)れた|I'm tired.)/i, (msg) ->
     msg.send msg.message.user.name+"さん、おつかれさま！"
 
-  robot.hear /ここはどこ/i, (msg) ->
+  robot.respond /messegeinfo/i, (msg) ->
     room = msg.message.user.room
     msg.send JSON.stringify(msg.message)
