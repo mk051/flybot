@@ -24,3 +24,7 @@ module.exports = (robot) ->
 
   robot.hear /((疲|つか)れた|I'm tired.)/i, (msg) ->
     msg.reply "おつかれさま！"
+
+  robot.hear /ここはどこ/i, (msg) ->
+    room = msg.message.user.room
+    msg.send room
