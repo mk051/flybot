@@ -27,4 +27,4 @@ module.exports = (robot) ->
 
   robot.hear /ここはどこ/i, (msg) ->
     room = msg.message.user.room
-    msg.send JSON.stringify(msg)
+    msg.send JSON.stringify(msg.message)
